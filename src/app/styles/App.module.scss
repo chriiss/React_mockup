@@ -1,0 +1,11 @@
+@use "/src/app/styles/" as mixins;
+
+@include mixins.globalsStyle();
+@include mixins.fontWeightStyle();
+@include mixins.navStyle();
+@include mixins.sectionOneStyle();
+@include mixins.sectionTwoStyle();
+@include mixins.modalStyle();
+@include mixins.sectionThreeStyle();
+@include mixins.sectionFourStyle();
+@include mixins.footerStyle();

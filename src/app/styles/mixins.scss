@@ -1,0 +1,465 @@
+@use "./variables.scss" as variables;
+
+@mixin fontStyle {
+    @font-face {
+        font-family: 'HelveticaNeue';
+        src: url("../assets/fonts/helvetica_neue.ttf") format("ttf");
+    }
+}
+
+@mixin globalsStyle {
+    html, body {
+        @include fontStyle();
+        padding: 0;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h2 {
+        font-size: variables.$primary_title_size;
+        @media(max-width: variables.$breakpoint_tablet) {
+            font-size: variables.$primary_title_size_mobile;
+        }
+    }
+    h3 {
+        font-size: calc(variables.$text_size * 1.38);
+    }
+    a {
+        text-decoration: none;
+    }
+    .d_flex {
+        display: flex;
+    }
+    .fd_column{
+        @media (max-width: variables.$breakpoint_tablet) {
+            flex-direction: column;
+        }
+    }
+    .text_center {
+        text-align: center;
+    }
+    .text_upperCase {
+        text-transform: uppercase;
+    }
+}
+
+
+@mixin fontWeightStyle {
+    .fontWeightFiveHundred {
+        font-weight: 500;
+    }
+
+    .fontWeightFourHundred {
+        font-weight: 400;
+    }
+}
+
+@mixin allButtonStyle {
+    background-color: variables.$secondary_color;
+    color: variables.$third_color;
+    padding: 10px 18px 12px 18px;
+    border-radius: 150px;
+}
+
+@mixin allButtonStyleHover {
+    background-color: variables.$third_color;
+    color: variables.$secondary_color;
+    border: 1px solid variables.$secondary_color;
+    transition: all .75s ease-in-out;
+}
+
+@mixin mobilePaddingStyle {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+@mixin navStyle {
+    .navbar {
+        padding: 30px 104px 0px 75px;
+        font-size: variables.$text_size;
+
+        @media(max-width: variables.$breakpoint_tablet) {
+           padding: 30px 0px 0px;
+        }
+
+        &_mobile_menu_button {
+            float: right;
+            border: none;
+            display: none;
+            @include allButtonStyle();
+            svg {
+                fill: variables.$third_color;
+            }
+
+            &:hover {
+                @include allButtonStyleHover();
+                svg {
+                    fill: variables.$secondary_color;
+                }
+            }
+
+            @media(max-width: variables.$breakpoint_tablet) {
+                display: block;
+            }
+        }
+
+        .show_menu {
+            display: block;
+        }
+
+        &_list {
+            justify-content: flex-end;
+            align-items: center;
+            gap: 29px;
+
+            &_item:first-child {
+                margin-right: auto;
+                @media(max-width: variables.$breakpoint_tablet) {
+                    margin-left: auto;
+                }
+            }
+            &_item {
+                list-style: none;
+
+                &_link {
+                    color: variables.$primary_color;
+                }
+            }
+
+            &_item_mobile {
+                @media(max-width: variables.$breakpoint_tablet) {
+                    display: none;
+                }
+            }
+
+            &_item:nth-child(5) {
+                a {
+                    @include allButtonStyle();
+
+                    &:hover {
+                        @include allButtonStyleHover();
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@mixin sectionOneStyle {
+    .section_one_container_title_text {
+        background-image: url(variables.$background_img);
+        height: 1563px;
+        padding-top: 124px;
+        background-repeat: no-repeat;
+        background-position: center top;
+
+        &_bloc_text {
+            color: variables.$secondary_color;
+            font-size: variables.$text_size;
+
+            @media (max-width: variables.$breakpoint_tablet) {
+                padding-left: 71px;
+                padding-right: 71px;
+            }
+        }
+        &_bloc_title {
+            width: 100%;
+            margin: auto;
+            display: block;
+            font-size: variables.$primary_title_size;
+
+            @media (max-width: variables.$breakpoint_tablet) {
+                font-size: variables.$primary_title_size_mobile;
+            }
+        }
+        &_bloc_price {
+            justify-content: flex-end;
+
+            @media(max-width: variables.$breakpoint_tablet) {
+                align-items: flex-end;
+                height: 1120px;
+            }
+
+            &_children {
+                background-color: variables.$secondary_color;
+                width: 227.24px;
+                height: 227.24px;
+                margin-right: 71.38px;
+                border-radius: 227.24px;
+                color: variables.$third_color;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-right: 3.25px;
+                margin-top: 80px;
+                div {
+                    transform:rotate(11.56deg);
+                    -webkit-transform:rotate(11.56deg);
+                    -moz-transform:rotate(11.56deg);
+                    -ms-transform:rotate(11.56deg);
+                    -o-transform:rotate(11.56deg);
+                }
+                div:nth-child(2) {
+                    font-size: variables.$primary_title_size;
+
+                    @media(max-width: variables.$breakpoint_tablet) {
+                        font-size: variables.$primary_title_size_mobile;
+                    }
+                }
+
+                div:first-child, div:last-child {
+                    font-size: calc(variables.$text_size * 1.38);
+                    @media(max-width: variables.$breakpoint_tablet) {
+                        font-size: variables.$text_size;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@mixin sectionTwoStyle {
+    .section_two_container {
+        justify-content: center;
+        flex-direction: column;
+
+        &_text {
+            font-size: calc(variables.$text_size * 1.38);
+            margin-bottom: 48px;
+            color: variables.$primary_color;
+
+            @media(max-width: variables.$breakpoint_tablet) {
+                @include mobilePaddingStyle();
+            }
+        }
+
+        &_button {
+            justify-content: center;
+            margin-bottom: 90px;
+            width: 100%;
+            button {
+                @include allButtonStyle();
+                border: none;
+                &:hover {
+                    @include allButtonStyleHover();
+                }
+            }
+        }
+
+        &_carrousel {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+
+            img {
+                flex: 0 0 50vw;
+                height: auto;
+                width: 100%;
+            }
+            &_pagination {
+                position: absolute;
+                left: 50%;
+                gap: 20px;
+
+                @media(min-width: 1440px) {
+                    margin-top: 658px;
+                }
+
+                @media(max-width: 1439px) {
+                    margin-top: 46%;
+                }
+
+                @media(max-width: variables.$breakpoint_tablet) {
+                    margin-top: 43%;
+                }
+
+                a {
+                    cursor:pointer;
+                }
+
+                svg:hover {
+                    fill: variables.$primary_color;
+                }
+            }
+        }
+    }
+}
+
+@mixin modalStyle {
+    .mymodal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+
+        border: 1px solid #ccc;
+        background: #fff;
+        overflow: auto;
+        border-radius: 4px;
+        outline: none;
+        padding-top: 40px;
+
+        @media(max-width: variables.$breakpoint_tablet) {
+            width: 100%;
+        }
+    }
+
+    .myoverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    .ReactModal__Overlay {
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
+    }
+
+    .ReactModal__Overlay--after-open {
+        opacity: 1;
+    }
+
+    .ReactModal__Overlay--before-close {
+        opacity: 0;
+    }
+
+    .close {
+        justify-content: flex-end;
+        margin-right: 40px;
+
+        button {
+            background: none;
+            border:none;
+
+            svg {
+                fill: variables.$primary_color;
+            }
+        }
+    }
+
+    .container_modal {
+        padding: 40px 105px 80px 106px;
+
+        .bloc_img {
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .bloc_text {
+            font-size: calc(variables.$text_size * 1.38);
+
+            @media(max-width: variables.$breakpoint_tablet) {
+                font-size: variables.$text_size;
+            }
+
+            &_children {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+@mixin sectionThreeStyle {
+    .section_three_container {
+       gap: 124px;
+       justify-content: flex-start;
+       flex-wrap: wrap;
+       margin-bottom: 90px;
+
+       &_img {
+        flex: 0.5;
+        @media(max-width: variables.$breakpoint_tablet) {
+           flex:1;
+        }
+        img {
+            @media(max-width: 1227px) {
+                width: 100%;
+                height: auto;
+            }
+        }
+       }
+
+       &_text {
+        flex: 0.4;
+        padding-top: 202px;
+
+        @media(max-width: variables.$breakpoint_tablet) {
+            flex:1;
+            padding-top: 30px;
+            @include mobilePaddingStyle();
+        }
+        p {
+            font-size: calc(variables.$text_size * 1.38);
+
+            @media(max-width: variables.$breakpoint_tablet) {
+                font-size: variables.$text_size;
+            }
+        }
+       }
+    }
+}
+
+@mixin sectionFourStyle {
+    .bloc_title {
+        margin-left: auto;
+        margin-right: auto;
+        width: 65%;
+        margin-bottom: 81px;
+        @media(max-width: variables.$breakpoint_tablet) {
+            width: 100%;
+        }
+    }
+    .section_four_container {
+        justify-content: flex-start;
+        gap: 42px;
+        margin-bottom: 90px;
+        @include mobilePaddingStyle();
+        overflow-x: scroll;
+
+        &_card {
+            border: 1px solid #F3F3F3;
+            padding:51px 42px 35px 41px;
+            img {
+                height: 315px;
+                width: 315px;
+            }
+            p {
+                font-size: variables.$text_size;
+            }
+        }
+    }
+
+    .section_four_container::-webkit-scrollbar {
+        background-color: variables.$third_color;
+    }
+    .section_four_container::-webkit-scrollbar-thumb {
+        background-color: variables.$primary_color;
+    }
+}
+
+@mixin footerStyle {
+    .footer {
+        background-color: variables.$footer_color;
+        padding: 90px 104px 90px 104px;
+
+        &_logo_colorz {
+            margin-bottom: 30px;
+        }
+        &_adress {
+            gap: 20px;
+            justify-content: space-between;
+
+            div:last-child {
+                margin-top: 30px;
+            }
+        }
+    }
+}

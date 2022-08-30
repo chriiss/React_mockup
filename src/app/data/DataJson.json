@@ -1,0 +1,119 @@
+{
+    "navbarComponent": [
+        {
+            "name": "Low Solution",
+            "link": "#"
+        },
+        {
+            "name": "Low Technology",
+            "link": "#"
+        },
+        {
+            "name": "High Price",
+            "link": "#"
+        },
+        {
+            "name": "Buy it",
+            "link": "#"
+        }
+    ],
+    "sectionOneComponent": {
+        "text" : {
+            "textOne": "Du",
+            "textTwo": "jamais vu",
+            "textThree": "(enfin jusqu’à maintenant, du coup)"
+        },
+        "title": "Avec Vision.R, travaillez au bureau... comme si vous étiez encore à la maison !",
+
+        "price" : {
+            "offers": "Offre Speciale",
+            "reduc": "799,99€*",
+            "reallyPrice": "*au lieu de 1.499,99€*"
+        }
+    },
+
+    "sectionTwoComponent": {
+        "text" : {
+            "paragraphOne": "Vision.R with a grand “R” like in the mot “Revolution” !",
+            "paragraphTwo": "You are afraid to feel déstabilized with the futur retour au bureau ?",
+            "paragraphThree": "With Vision.R, be rassuré.e.s ! Get instant, real time, high resolution, social",
+            "paragraphFour": "videocall and feel comme à la maison. Bref, get ready to faire un carton !",
+            "linkName": "Buy it now"
+        },
+        "modal": {
+            "title": "Vous y avez (vraiment?) cru ?",
+            "paragraphSection": "En tout cas, on espère que ça vous a fait sourire, parce qu’on en a bien besoin en ce moment. Et sinon, vous avez sûrement des produits plus intéressants à vendre.",
+            "paragraphFooter": "Ça tombe bien, nos équipes sont plus fortes en communication digitale qu’en innovations en carton."
+        },
+        "carrousel": [
+            {
+                "path": "Slider_B_1.svg",
+                "idName": "slide_one"
+            },
+            {
+                "path": "Slider_B_2.svg",
+                "idName": "slide_two"
+            },
+            {
+                "path": "Slider_B_3.svg",
+                "idName": "slide_three"
+            }
+        ],
+        "carrouselPagination": [
+            {
+                "idNameLink": "slide_one"
+            },
+            {
+                "idNameLink": "slide_two"
+            },
+            {
+                "idNameLink": "slide_three"
+            }
+        ]
+    },
+    "sectionThreeComponent": {
+        "title": "The pudique (or je suis en pyjama et j’assume pas) effect",
+        "paragraph": "With our no camera mode, you can be wherever you want and be en pyjama in totale discretion with professionnalisme."
+    },
+
+    "sectionFourComponent": {
+        "title": "Some indispensables accessoires to optimize your experience",
+        "card": [
+            {
+                "path": "Product_1_2.svg",
+                "article": "The funny filter kit (D’jeuns friendly)",
+                "price": "199,00€"
+            },
+            {
+                "path": "Product_1_1.svg",
+                "article": "Screen camera off",
+                "price": "229,00€"
+            },
+            {
+                "path": "Product_1_3.svg",
+                "article": "The Charentaiz (Yeuv Friendly)",
+                "price": "349,95€"
+            }
+        ]
+    },
+    "footerComponent": {
+        "place": [
+            {
+                "city": "Paris",
+                "adress": "16 bis avenue Parmentier",
+                "countries": "75011, France"
+            },
+            {
+                "city": "Lyon",
+                "adress": "1 rue Lalande",
+                "countries": " 69006 Lyon, France"
+            }
+        ],
+        "contact": {
+            "title": "Nous contacter",
+            "number": "+33 (0)1 82 83 83 60",
+            "mail": "hello@colorz.fr"
+        }
+
+    }
+}
