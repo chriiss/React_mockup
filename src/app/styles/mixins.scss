@@ -73,7 +73,7 @@
 
 @mixin navStyle {
     .navbar {
-        padding: 30px 104px 0px 75px;
+        padding: 30px 104px 0px 62px;
         font-size: variables.$text_size;
 
         @media(max-width: variables.$breakpoint_tablet) {
@@ -189,7 +189,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                padding-right: 3.25px;
+                padding-right: 12.25px;
                 margin-top: 80px;
                 div {
                     transform:rotate(11.56deg);
