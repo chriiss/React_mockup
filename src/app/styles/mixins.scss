@@ -1,10 +1,7 @@
 @use "./variables.scss" as variables;
 
 @mixin fontStyle {
-    @font-face {
-        font-family: 'HelveticaNeue';
-        src: url("../assets/fonts/helvetica_neue.ttf") format("ttf");
-    }
+    font-family: 'Helvetica', sans-serif;
 }
 
 @mixin globalsStyle {
